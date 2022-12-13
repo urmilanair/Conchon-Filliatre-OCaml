@@ -6,11 +6,11 @@ Conchon et Filliâtre
 # Chapter 1. The Working Environment
 
 
-The OCaml language is available for various operating systems (Linux, Mac OS,
+The OCaml language is available for various operating systems (Linux, MacOS,
 Windows, etc.). It can be obtained at the following address:
 http://caml.inria.fr/ocaml/release.fr.html It is also available through the main
-package managers (apt-get, port, yum, brew, etc.). OCaml can also be downloaded
-using the OPAM package manager, available at the following address:
+package managers (`apt-get`, `port`, `yum`, `brew`, etc.). OCaml can also be
+downloaded using the OPAM package manager, available at the following address:
 http://opam.ocaml.org 
 
 ## 1.1 Compiler and interpreter 
@@ -19,8 +19,8 @@ The OCaml language comes with two compilers: `ocamlc` and `ocamlopt`. The first
 generates portable code, independent of the hardware architecture; the second
 generates more efficient native code (X86, ARM, etc.). You can use either of
 these two tools to compile the programs given in this book. There is also an
-interactive version of the OCaml language: the `ocaml` program, an interpreter or
-_toplevel_, which executes a read-eval-print loop (REPL).
+interactive version of the OCaml language: the `ocaml` program, an interpreter
+or _toplevel_, which executes a read-eval-print loop (REPL).
 
 ## 1.2 Our First OCaml Program 
 
@@ -202,11 +202,11 @@ corresponds to a _variable binding_ of the form:
 let year = ...
 ```
 
-This serves to define a new variable `year` with the result of the expression
-to the right of the symbol `=`. Here, the type of the variable `year` does not
-have to be declared; it is automatically deduced by the compiler or the
-interpreter. The expression to the right of the symbol `=` is a function call.
-It is a call to the predefined function `read_int`.
+This serves to define a new variable `year` with the result of the expression to
+the right of the symbol `=`. Here, the type of the variable `year` does not have
+to be declared; it is automatically deduced by the compiler or the interpreter.
+The expression to the right of the symbol `=` is a function call. It is a call
+to the predefined function `read_int`.
 
 ```
 ... = read_int ()
@@ -268,7 +268,9 @@ let () = ...
 
 This is somewhat enigmatic, and will remain so for the present. It will be
 explained when we discuss pattern matching in sections _2.6 Drawing a Curve_ and
-_2.12 Playing a Musical Score_. For now, suffice it to say that, in
-general, an OCaml program is a series of statements that are evaluated from top
-to bottom, that is, in the order in which they appear in the source file. Unlike
-languages like C or Java, there is no `main` entry point. To maintain the same format, the statement `let () = ...` is used in case of expressions that do not return a value. (And OCaml verifies that this is indeed the case.)
+_2.12 Playing a Musical Score_. For now, suffice it to say that, in general, an
+OCaml program is a series of statements that are evaluated from top to bottom,
+that is, in the order in which they appear in the source file. Unlike languages
+like C or Java, there is no `main` entry point. To maintain the same format, the
+statement `let () = ...` is used in case of expressions that do not return a
+value. (And OCaml verifies that this is indeed the case.)
